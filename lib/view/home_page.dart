@@ -23,20 +23,16 @@ class _HomePageState extends State<HomePage> {
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const SizedBox(
-                height: 25,
-              ),
+              const SizedBox(height: 25,),
               const Text(
                   'Escolha Pedra, Papel ou Tesoura!!!',
                 style: TextStyle(
                   fontSize: 25
                 ),
               ),
-              const SizedBox(
-                height: 40,
-              ),
+              const SizedBox(height: 40,),
               const Circlerowwidgets(),
-              const SizedBox(height: 40),
+              const SizedBox(height: 30),
               const Text(''
                   'Escolha do PC!!!',
                 style: TextStyle(
@@ -45,6 +41,11 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox( height: 25),
               const Pccircle(),
+              const SizedBox(height: 30),
+              const Text(
+                'Placar',
+                style: TextStyle(fontSize: 25),
+              )
             ],
           )
         ],
