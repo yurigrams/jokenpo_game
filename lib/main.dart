@@ -6,6 +6,12 @@ void main() {
     home: HomePage(),
     theme: ThemeData(
       useMaterial3: false,
+      appBarTheme: AppBarTheme(
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+      ),
+      scaffoldBackgroundColor: Colors.black26,
+
     ),
   ));
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:prova_jokenpo/widgets/circle_row_widgets.dart';
 import 'package:prova_jokenpo/widgets/pc_circle_avatar.dart';
+import 'package:prova_jokenpo/widgets/scoreboard.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -42,10 +43,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox( height: 25),
               const Pccircle(),
               const SizedBox(height: 30),
-              const Text(
-                'Placar',
-                style: TextStyle(fontSize: 25),
-              )
+              Scoreboard(scorePlayer: 0, scorrePc: 0)
             ],
           )
         ],
