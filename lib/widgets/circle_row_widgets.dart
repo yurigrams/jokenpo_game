@@ -14,24 +14,42 @@ class _CirclerowwidgetsState extends State<Circlerowwidgets> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          child: CircleAvatar(
-            radius: 40,
+          child: GestureDetector(
+            onTap: (){
+              print('oi');
+            },
+            child: CircleAvatar(
+              child: Icon(Icons.recommend),
+              radius: 40,
+            ),
           ),
         ),
         const SizedBox(
           width: 20,
         ),
         Container(
-          child: CircleAvatar(
-            radius: 40,
+          child: GestureDetector(
+            onTap: (){
+              print('oi2');
+            },
+            child: CircleAvatar(
+              child: Icon(Icons.back_hand_sharp),
+              radius: 40,
+            ),
           ),
         ),
         const SizedBox(
           width: 20,
         ),
         Container(
-          child: CircleAvatar(
-            radius: 40,
+          child: GestureDetector(
+            onTap: (){
+              print('oi3');
+            },
+            child: CircleAvatar(
+              child: Icon(Icons.cut),
+              radius: 40,
+            ),
           ),
         ),
       ],
