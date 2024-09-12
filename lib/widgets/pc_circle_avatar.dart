@@ -1,24 +1,33 @@
 import 'package:flutter/material.dart';
 
-class Pccircle extends StatefulWidget {
-  const Pccircle({super.key});
+class Pccircle extends StatelessWidget {
+  final String pcChoice;
+  const Pccircle({super.key, required this.pcChoice});
 
-  @override
-  State<Pccircle> createState() => _PccircleState();
-}
-
-class _PccircleState extends State<Pccircle> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          child: CircleAvatar(
-            radius: 40,
-          ),
-        )
-      ],
+    IconData icon;
+
+    switch (pcChoice) {
+      case 'Pedra':
+        icon = Icons.recommend;
+        break;
+      case 'Papel':
+        icon = Icons.back_hand_sharp;
+        break;
+      case 'Tesoura':
+        icon = Icons.cut;
+        break;
+      default:
+        icon = Icons.help;
+    }
+
+    return Center(
+      child: CircleAvatar(
+        child: Icon(icon, size: 50),
+        radius: 40,
+        backgroundColor: Colors.green,
+      ),
     );
   }
 }

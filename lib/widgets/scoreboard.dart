@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Scoreboard extends StatefulWidget {
-  final int scorePlayer = 0;
-  final int scorePc = 0;
-  const Scoreboard({super.key,required scorePlayer, required scorrePc});
+class Scoreboard extends StatelessWidget {
+  final int scorePlayer;
+  final int scorePc;
 
-  @override
-  State<Scoreboard> createState() => _ScoreboardState();
-}
-
-class _ScoreboardState extends State<Scoreboard> {
-
-
+  const Scoreboard({super.key, required this.scorePlayer, required this.scorePc});
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +13,14 @@ class _ScoreboardState extends State<Scoreboard> {
       children: [
         Container(
           width: 400,
-          height: 200,
+          height: 150,
           decoration: BoxDecoration(
             color: Colors.black,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
               color: Colors.green,
-              width: 5
-            )
+              width: 5,
+            ),
           ),
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -40,11 +33,10 @@ class _ScoreboardState extends State<Scoreboard> {
                     color: Colors.green,
                     height: 2,
                     fontSize: 16,
-                    fontWeight: FontWeight.bold
-                ),
+                    fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 10),
-              Row(
+              const SizedBox(height: 10),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: const [
                   Text(
@@ -56,41 +48,40 @@ class _ScoreboardState extends State<Scoreboard> {
                     ),
                   ),
                   Text(
-                     "Computer",
+                    "Computer",
                     style: TextStyle(
                       color: Colors.green,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
-                  )
-                ]
+                  ),
+                ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text(
-                    widget.scorePlayer.toString(),
+                    scorePlayer.toString(),
                     style: const TextStyle(
                       color: Colors.green,
-                      fontSize: 70,
+                      fontSize: 30,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
-                    widget.scorePc.toString(),
+                    scorePc.toString(),
                     style: const TextStyle(
                       color: Colors.green,
-                      fontSize: 70,
+                      fontSize: 30,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
-              )
+              ),
             ],
-          )
-
-        )
+          ),
+        ),
       ],
     );
   }
